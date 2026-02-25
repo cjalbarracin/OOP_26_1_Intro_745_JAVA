@@ -47,7 +47,7 @@ return tabla;
     }
 
     return resultado;
-        return 0;
+       
     }
 
     // Método que verifica si un número es primo
