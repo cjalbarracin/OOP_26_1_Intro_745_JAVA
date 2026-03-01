@@ -68,8 +68,11 @@ return tabla;
 
     // Método que genera una serie de Fibonacci
     public int[] serieFibonacci(int n) {
-        public int[] serieFibonacci(int n) {
-    if (n <= 0) {
+    if (n < 0) {
+        throw new IllegalArgumentException("n no puede ser negativo");
+    }
+
+    if (n == 0) {
         return new int[0];
     }
 
@@ -88,8 +91,6 @@ return tabla;
 
     return serie;
 }
-        return new int[0];
-    }
 
     // Método que suma todos los elementos de un arreglo
     public int sumaElementos(int[] arreglo) {
