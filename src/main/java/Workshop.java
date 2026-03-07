@@ -147,10 +147,15 @@ return tabla;
 
     // Método que busca un elemento en un arreglo
     public boolean buscarElemento(int[] arreglo, int elemento) {
-        // TODO: Implementar el método para buscar un elemento en un arreglo.
-        // Ejemplo: Si arreglo = [1, 2, 3, 4, 5] y elemento = 3, el resultado debería ser true.
-        return false;
+
+    for (int i = 0; i < arreglo.length; i++) {
+        if (arreglo[i] == elemento) {
+            return true;
+        }
     }
+
+    return false;
+}
 
     // Método que invierte un arreglo
     public int[] invertirArreglo(int[] arreglo) {
