@@ -285,24 +285,30 @@ return tabla;
 
     // Método que verifica si una cadena es un palíndromo
     public boolean esPalindromo(String cadena) {
-        // TODO: Implementar el método para verificar si una cadena es un palíndromo.
-        // Ejemplo: Si cadena = "madam", el resultado debería ser true.
-        return false;
+
+    String invertida = "";
+
+    for (int i = cadena.length() - 1; i >= 0; i--) {
+        invertida = invertida + cadena.charAt(i);
     }
+
+    return cadena.equals(invertida);
+}
 
     // Método que cuenta el número de palabras en una cadena
     public int contarPalabras(String cadena) {
-        // TODO: Implementar el método para contar el número de palabras en una cadena.
-        // Ejemplo: Si cadena = "Este es un test", el resultado debería ser 4.
-        return 0;
-    }
+
+    String[] palabras = cadena.split(" ");
+
+    return palabras.length;
+}
 
     // Método que convierte una cadena a mayúsculas
     public String convertirAMayusculas(String cadena) {
-        // TODO: Implementar el método para convertir una cadena a mayúsculas.
-        // Ejemplo: Si cadena = "hello", el resultado debería ser "HELLO".
-        return "";
-    }
+        public String convertirAMayusculas(String cadena) {
+
+    return cadena.toUpperCase();
+}
 
     // Método que convierte una cadena a minúsculas
     public String convertirAMinusculas(String cadena) {
