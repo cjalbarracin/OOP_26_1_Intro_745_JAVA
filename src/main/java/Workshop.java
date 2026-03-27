@@ -349,12 +349,27 @@ return tabla;
 
     // Método que convierte un número en su representación binaria
     public String convertirABinario(int numero) {
+        if (numero == 0) {
+            return "0";
+        }
+
+        boolean esNegativo = false;
+
+        if (numero < 0) {
+            esNegativo = true;
+            numero = numero * -1;
+        }
+
         String resultado = "";
 
         while (numero > 0) {
             int residuo = numero % 2;
             resultado = residuo + resultado;
             numero = numero / 2;
+        }
+
+        if (esNegativo) {
+            resultado = "-" + resultado;
         }
 
         return resultado;
