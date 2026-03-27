@@ -108,7 +108,7 @@ return tabla;
     // Método que calcula el promedio de los elementos de un arreglo
     public double promedioElementos(int[] arreglo) {
     if (arreglo.length == 0) {
-        throw new IllegalArgumentException("El arreglo no puede estar vacío");
+        throw new IllegalArgumentException("El arreglo n puede estar vacío");
     }
 
     int suma = 0;
