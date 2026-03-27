@@ -349,9 +349,15 @@ return tabla;
 
     // Método que convierte un número en su representación binaria
     public String convertirABinario(int numero) {
-        // TODO: Implementar el método para convertir un número en su representación binaria.
-        // Ejemplo: Si numero = 10, el resultado debería ser "1010".
-        return "";
+        String resultado = "";
+
+        while (numero > 0) {
+            int residuo = numero % 2;
+            resultado = residuo + resultado;
+            numero = numero / 2;
+        }
+
+        return resultado;
     }
 
     // Método que convierte un número en su representación hexadecimal
