@@ -14,11 +14,15 @@ public class Workshop {
 
     // Método que encuentra el mayor de tres números enteros
     public int mayorDeTresNumeros(int a, int b, int c) {
-        // TODO: Implementar el método para retornar el mayor de los tres números enteros.
-        // Ejemplo: Si a = 3, b = 7, y c = 5, el resultado debería ser 7.
-      if (a>= b && a >=c) return a;
-    if (b>=c) return b;  
-      return c;
+        if (a >= b && a >= c) {
+            return a;
+        }
+
+        if (b >= c) {
+            return b;
+        }
+
+        return c;
     }
 
     // Método que retorna la tabla de multiplicar de un número
@@ -68,37 +72,35 @@ return tabla;
 
     // Método que genera una serie de Fibonacci
     public int[] serieFibonacci(int n) {
-    if (n < 0) {
-        throw new IllegalArgumentException("n no puede ser negativo");
-    }
+        if (n < 0) {
+            throw new IllegalArgumentException("n no puede ser negativo");
+        }
 
-    if (n == 0) {
-        return new int[0];
-    }
+        if (n == 0) {
+            return new int[0];
+        }
 
-    int[] serie = new int[n];
-
-    if (n >= 1) {
+        int[] serie = new int[n];
         serie[0] = 0;
-    }
-    if (n >= 2) {
-        serie[1] = 1;
-    }
 
-    for (int i = 2; i < n; i++) {
-        serie[i] = serie[i - 1] + serie[i - 2];
-    }
+        if (n > 1) {
+            serie[1] = 1;
+        }
 
-    return serie;
+        for (int i = 2; i < n; i++) {
+            serie[i] = serie[i - 1] + serie[i - 2];
+        }
+
+        return serie;
 }
 
     // Método que suma todos los elementos de un arreglo
     public int sumaElementos(int[] arreglo) {
     int suma = 0;
 
-    for (int i = 0; i < arreglo.length; i++) {
-        suma += arreglo[i];
-    }
+        for (int num : arreglo) {
+            suma += num;
+        }
 
     return suma;
 }
@@ -111,8 +113,8 @@ return tabla;
 
     int suma = 0;
 
-    for (int i = 0; i < arreglo.length; i++) {
-        suma += arreglo[i];
+        for (int num : arreglo) {
+            suma += num;
     }
 
     return (double) suma / arreglo.length;
@@ -148,8 +150,8 @@ return tabla;
     // Método que busca un elemento en un arreglo
     public boolean buscarElemento(int[] arreglo, int elemento) {
 
-    for (int i = 0; i < arreglo.length; i++) {
-        if (arreglo[i] == elemento) {
+        for (int num : arreglo) {
+            if (num == elemento) {
             return true;
         }
     }
@@ -274,13 +276,13 @@ return tabla;
     // Método que invierte una cadena
     public String invertirCadena(String cadena) {
 
-    String resultado = "";
+        StringBuilder resultado = new StringBuilder();
 
-    for (int i = cadena.length() - 1; i >= 0; i--) {
-        resultado = resultado + cadena.charAt(i);
-    }
+        for (int i = cadena.length() - 1; i >= 0; i--) {
+            resultado.append(cadena.charAt(i));
+        }
 
-    return resultado;
+        return resultado.toString();
 }
 
     // Método que verifica si una cadena es un palíndromo
@@ -305,18 +307,14 @@ return tabla;
 
     // Método que convierte una cadena a mayúsculas
     public String convertirAMayusculas(String cadena) {
-        public String convertirAMayusculas(String cadena) {
+        return cadena.toLowerCase();
 
-    return cadena.toUpperCase();
 }
 
     // Método que convierte una cadena a minúsculas
     public String convertirAMinusculas(String cadena) {
-        // TODO: Implementar el método para convertir una cadena a minúsculas.
-        // Ejemplo: Si cadena = "HELLO", el resultado debería ser "hello".
-        return "";
+        return cadena.toLowerCase();
     }
-
     // Método que reemplaza una subcadena en una cadena por otra subcadena
     public String reemplazarSubcadena(String cadena, String antiguaSubcadena, String nuevaSubcadena) {
         // TODO: Implementar el método para reemplazar una subcadena en una cadena por otra subcadena.
