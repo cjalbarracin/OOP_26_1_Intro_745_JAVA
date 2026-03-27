@@ -333,9 +333,18 @@ return tabla;
     // Método que calcula el promedio de una lista de números
 
     public double promedioLista(List<Integer> lista) {
-        // TODO: Implementar el método para calcular el promedio de una lista de números.
-        // Ejemplo: Si lista = [1, 2, 3, 4, 5], el resultado debería ser 3.0.
-        return 0.0;
+        if (lista == null || lista.isEmpty()) {
+            throw new IllegalArgumentException("La lista no puede estar vacía");
+        }
+
+        int suma = 0;
+
+        for (int num : lista) {
+            suma += num;
+        }
+
+        return (double) suma / lista.size();
+
     }
 
     // Método que convierte un número en su representación binaria
@@ -347,9 +356,7 @@ return tabla;
 
     // Método que convierte un número en su representación hexadecimal
     public String convertirAHexadecimal(int numero) {
-        // TODO: Implementar el método para convertir un número en su representación hexadecimal.
-        // Ejemplo: Si numero = 255, el resultado debería ser "FF".
-        return "";
+        return Integer.toHexString(numero).toUpperCase();
     }
 
     // Método para el juego de piedra, papel, tijera, lagarto, Spock
