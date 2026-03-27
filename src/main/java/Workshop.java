@@ -119,7 +119,7 @@ return tabla;
 }
 
     // Método que encuentra el elemento mayor en un arreglo
-    public int encontrarElementoMayor(int[] arreglo{
+    public int encontrarElementoMayor(int[] arreglo){
        int mayor = arreglo[0];
 
       for (int i = 1; i < arreglo.length; i++) {
