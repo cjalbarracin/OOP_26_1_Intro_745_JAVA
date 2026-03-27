@@ -307,7 +307,7 @@ return tabla;
 
     // Método que convierte una cadena a mayúsculas
     public String convertirAMayusculas(String cadena) {
-        return cadena.toLowerCase();
+        return cadena.toUpperCase();
 
 }
 
